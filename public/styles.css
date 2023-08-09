@@ -45,7 +45,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /* For portrait phones */
 
 .container {
-    display: grid;
+    display: none;
     grid-template-columns: 1fr;
     grid-template-rows: 0.1fr 1fr;
     min-height: 100dvh;

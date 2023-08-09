@@ -13,15 +13,13 @@ const App = () => {
   useEffect(() => {
     const onPageLoad = () => {
       let tl = gsap.timeline();
-      tl.fromTo(
-        ".header",
-        { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1 }
-      ).fromTo(
-        ".wrapper",
-        { opacity: 0, visibility: "hidden" },
-        { opacity: 1, visibility: "visible", duration: 2 }
-      );
+      tl.to(".container", { display: "grid" })
+        .fromTo(
+          ".header",
+          { y: 50, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1 }
+        )
+        .fromTo(".wrapper", { opacity: 0 }, { opacity: 1, duration: 2 });
     };
 
     if (document.readyState === "complete") {
